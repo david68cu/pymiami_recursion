@@ -3,7 +3,7 @@ Exercise 1: Write a recursive function count_multiples(a, b) that counts
 how many multiples of a are part of the factorization of the number b. 
 For example:
 
- >>> count_multiples(2, 4)     # 2 * 2 = 4
+ >>> count_multiples(2, 6)     # 2 * 3 = 6
  1
  >>> count_multiples(2, 12)    # 2 * 2 * 3 = 12
  2
@@ -19,8 +19,9 @@ import traceback
 
 def count_multiples(a, b,counter=0):
     traceback.print_stack()
-    if a > 1 and b>a:  # Recursive case avoid 6/1(a>1) or 2/4()
-      if b%a == 0:   
+    # Avoiding 6/1(a>1) or 2/4(b>a)
+    if a > 1 and b>a:  
+      if b%a == 0:  # Recursive case  
           counter += 1
           b= b/a
           return count_multiples(a, b, counter)

@@ -3,7 +3,7 @@ Exercise 1: Write a recursive function count_multiples(a, b) that counts
 how many multiples of a are part of the factorization of the number b. 
 For example:
 
- >>> count_multiples(2, 4)     # 2 * 2 = 4
+ >>> count_multiples(2, 6)     # 2 * 3 = 6
  1
  >>> count_multiples(2, 12)    # 2 * 2 * 3 = 12
  2
@@ -11,8 +11,8 @@ For example:
  6
  >>>
 
-This solution take the state and "thread it" taking to an external entity 
-in this case a class
+This solution take the state and "thread it" taking to an external entity in this case a class
+This is in my opinion the worse implementation out of teh three solutions 
 """
 class Counter():
 
