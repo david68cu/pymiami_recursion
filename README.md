@@ -39,3 +39,23 @@ Exercise 1: Write a recursive function count_multiples(a, b) that counts how man
  5
  >>>
  ```
+
+## Unit testing with Pytest
+
+We added a simple test just to exemplify the use of Pytest
+Note that we had to run pytest as:
+
+```python
+python -m pytest
+```
+
+## GitHub actions for CI
+
+After deploying to GitHUb we want to double check that any new commit is free of errors.So any new pull request must first pass aGitHub actions that:
+
+* Run the new pycodestyle (old pep8)  lynter
+* Execute the unit test
+
+### References
+
+[1][Test Driven Development Python by  Harry J.W. Percival]
