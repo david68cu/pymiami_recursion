@@ -1,4 +1,10 @@
 import traceback
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+for path in sys.path:
+    print(path)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Solution # 1
@@ -32,7 +38,8 @@ def count_multiples1(a, b, c, counter=0):
 
 
 def count_multiples2(a, b, counter=0):
-    traceback.print_stack()
+    # To see the stack uncomment below line
+    # traceback.print_stack()
     # Avoiding 6/1(a>1) or 2/4(b>a)
     if a > 1 and b > a:
         if b % a == 0:  # Recursive case
@@ -49,7 +56,8 @@ def count_multiples2(a, b, counter=0):
 
 
 def count_multiples(a, b):
-    traceback.print_stack()
+    # To see the stack uncomment below line
+    # traceback.print_stack()
     if b % a:  # base case will look when b%a is not zero
         # breakpoint()
         return 0
