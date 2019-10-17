@@ -1,3 +1,5 @@
+import traceback
+
 def count_multiples(a, b):
     traceback.print_stack()
     if b % a: # base case will look when b%a is not zero 
