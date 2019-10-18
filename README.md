@@ -35,7 +35,7 @@ Exercise 1: Write a recursive function count_multiples(a, b) that counts how man
  1
  >>> count_multiples(2, 12)    # 2 * 2 * 3 = 12
  2
- >>> count_multiples(3, 243)   
+ >>> count_multiples(3, 243)
  5
  >>>
  ```
