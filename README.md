@@ -42,19 +42,25 @@ Exercise 1: Write a recursive function count_multiples(a, b) that counts how man
 
 ## Unit testing with Pytest
 
-We added a simple test just to exemplify the use of Pytest
-Note that we had to run pytest as:
+We added two  tests to  just exemplify how to  use Pytest
+Note that we had to run pytest as module as under:
 
 ```python
 python -m pytest
 ```
 
-## GitHub actions for CI
+* Test #1  Unit testing a file, in thie case exercise1_solution.py
+* Test #2  Run a test where we check that the 
 
-After deploying to GitHUb we want to double check that any new commit is free of errors.So any new pull request must first pass aGitHub actions that:
+## GitHub actions for Continous Integration
 
-* Run the new pycodestyle (old pep8)  lynter
-* Execute the unit test
+After deploying to GitHub we want to double check that any new commit is free of errors. Code comming from other developers , will need correctly satisfy these action before being merged.
+
+So any new pull request must first pass a GitHub action that:
+
+* Install dependencies in requirements.txt
+* Run the new pycodestyle (old pep8)  lynter and check there is no style errors
+* Execute the unit tests  we have defined for this application
 
 ### References
 
