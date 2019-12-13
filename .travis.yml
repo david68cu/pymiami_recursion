@@ -10,4 +10,4 @@ jobs:
   - name: "3.7 Unit Tests"
     python: "3.7"
     env: TEST_SUITE=tests
-script: ./test.py $TEST_SUITE
+script: tests/
