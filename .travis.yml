@@ -6,6 +6,6 @@ services:
 before_script: pip install docker-compose
 
 script:
-  - docker-compose run app sh -c "python tests/test_pycodestyle_check.py"
+  - docker-compose run sh -c "python tests/test_pycodestyle_check.py"
 
 
