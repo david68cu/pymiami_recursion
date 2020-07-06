@@ -1,16 +1,11 @@
 language: python
-# command to install dependencies
-install:
-  - pip install -r requirements.txt
-jobs:
-  include:
-  - name: "3.5 Unit Test"
-    python: "3.5"
-    env: TEST_SUITE=tests
-  - name: "3.7 Unit Tests"
-    python: "3.7"
-    env: TEST_SUITE=tests
-  - before_install:
-      chmod +x tests/test_pycodestyle_check.py
-script: tests/test_pycodestyle_check.py
+python:
+  - "3.7"
+services:
+  - docker
+before_script: pip install docker-compose
+
+script:
+  - docker-compose run app sh -c "python tests/test_pycodestyle_check.py"
+
 
