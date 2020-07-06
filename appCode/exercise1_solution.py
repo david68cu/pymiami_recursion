@@ -1,6 +1,7 @@
 import traceback
 import sys
 import os
+
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 for path in sys.path:
@@ -11,8 +12,7 @@ for path in sys.path:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-class Counter():
-
+class Counter:
     def __init__(self, c=0):
         self.c = c
 
@@ -29,8 +29,9 @@ def count_multiples1(a, b, c, counter=0):
         if b % a == 0:
             counter += 1
             c.count(counter)
-            b = b/a
+            b = b / a
             count_multiples(a, b, c, counter)
+
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Solution # 2
@@ -44,11 +45,12 @@ def count_multiples2(a, b, counter=0):
     if a > 1 and b > a:
         if b % a == 0:  # Recursive case
             counter += 1
-            b = b/a
+            b = b / a
             return count_multiples(a, b, counter)
         else:
             # return (a, b, counter)
             return counter
+
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Solution # 3
