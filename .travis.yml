@@ -10,5 +10,7 @@ jobs:
   - name: "3.7 Unit Tests"
     python: "3.7"
     env: TEST_SUITE=tests
+  - before_install:
+      chmod +x tests/test_pycodestyle_check.py
 script: tests/test_pycodestyle_check.py
 
